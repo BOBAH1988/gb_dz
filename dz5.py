@@ -30,7 +30,16 @@
 # Иванов 23543.12
 # Петров 13749.32
 
-
+# with open('zap.txt', 'r') as my_file:
+#     summa = []
+#     surname = []
+#     my_list = my_file.read().split('\n')
+#     for i in my_list:
+#         i = i.split()
+#         if float(i[1]) < 20000:
+#            surname.append(i[0])
+#         summa.append(i[1])
+# print(f'Оклад меньше 20.000 рублей у сотрудников: {surname}, средний оклад в компании: {sum(map(float, summa)) / len(summa)}')
 
 # 4. Создать (не программно) текстовый файл со следующим содержимым:
 # One — 1
