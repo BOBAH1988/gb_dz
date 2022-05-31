@@ -63,17 +63,6 @@
 # Программа должна подсчитывать сумму чисел в файле и выводить её на экран.
 
 # def my_f():
-#     try:
-#         with open('texts.txt', 'r+') as file:
-#             file.write(input('Введите набор чисел: '))
-#             n = map(int, file.read().split())
-#             print(n)
-#             print(sum(n))
-#     except FileNotFoundError:
-#         print('Файл не найден.')
-# my_f()
-
-# def my_f():
 #     with open('texts.txt', 'w+') as file_obj:
 #         input_int = input('Введите набор чисел через пробел: \n')
 #         file_obj.writelines(input_int)
@@ -90,7 +79,20 @@
 # Физкультура: — 30(пр) —
 # Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 
-
+# import re
+# subj = {}
+# with open('lessn.txt', 'r', encoding='utf-8') as f:
+#     for line in f:
+#         subject, lecture, practice, lab = line.split()
+#         lecture1 = re.sub(r'-', '0', lecture)
+#         practice1 = re.sub(r'-', '0', practice)
+#         lab1 = re.sub(r'-', '0', lab)
+#         lecture2 = int(re.sub(r'[а-я-()]', '', lecture1))
+#         practice2 = int(re.sub(r'[а-я-()]', '', practice1))
+#         lab2 = int(re.sub(r'[а-я-()]', '', lab1))
+#         subject1 = re.sub(r':', '', subject)
+#         subj[subject1] = (lecture2) + (practice2) + (lab2)
+#     print(f'Общее количество часов по предметам: \n{subj}')
 
 # 7. Создать вручную и заполнить несколькими строками текстовый файл, в котором каждая строка будет содержать данные о фирме:
 # название, форма собственности, выручка, издержки.
@@ -105,3 +107,4 @@
 # [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 # Подсказка: использовать менеджер контекста.
 
+# Эту задачу пропущу пока, нужно много время чтоб разбраться.
