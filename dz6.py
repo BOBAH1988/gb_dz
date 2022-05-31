@@ -28,7 +28,17 @@
 # толщиной в 1 см*число см толщины полотна; проверить работу метода.
 # Например: 20 м*5000 м*25 кг*5 см = 12500 т.
 
-
+# class Road:
+#     def __init__(self, length, width):
+#         self._length = length
+#         self._width = width
+#         self.weight = 25
+#         self.height = 5
+#     def mass(self):
+#         mass = self._length * self._width * self.weight * self.height / 1000
+#         print(f'Для покрытия дороги неободимо {round(mass)} т')
+# r = Road(5000, 20)
+# r.mass()
 
 # 3. Реализовать базовый класс Worker (работник).
 # определить атрибуты: name, surname, position (должность), income (доход);
@@ -38,7 +48,21 @@
 # и дохода с учётом премии (get_total_income); проверить работу примера на реальных данных:
 # создать экземпляры класса Position, передать данные, проверить значения атрибутов, вызвать методы экземпляров.
 
-
+# class Worker:
+#     def __init__(self, name, surname, position, wage, bonus):
+#         self.name = name
+#         self.surname = surname
+#         self.position = position
+#         self._income = {"wage": int(wage), "bonus": int(bonus)}
+# class Position(Worker):
+#     def __init__(self, name, surname, position, wage, bonus):
+#         super().__init__(name, surname, position, wage, bonus)
+#     def get_full_name(self):
+#         return self.name + ' ' + self.surname
+#     def get_total_income(self):
+#         return self._income["wage"] + self._income["bonus"]
+# n = Position('Vasya', 'Pupkin', 'manager', '75000', '5000')
+# print(n.get_full_name(), n.get_total_income())
 
 # 4. Реализуйте базовый класс Car.
 # у класса должны быть следующие атрибуты: speed, color, name, is_police (булево).
