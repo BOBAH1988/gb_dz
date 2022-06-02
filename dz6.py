@@ -93,7 +93,7 @@
 #         if self.speed > 60:
 #             return f'\nВаша скорость выше допустимой: {self.speed}'
 #         else:
-#             return f'Ваша скорость {self.name} в норме:'
+#             return f'Ваша скорость в норме:'
 # class SportCar(Car):
 #     pass
 # class WorkCar(Car):
@@ -104,7 +104,17 @@
 #             return f'Скорость {self.name} в норме'
 # class PoliceCar(Car):
 #     pass
-
+# town = TownCar('БМВ', 60, 'синяя', False)
+# print(town.go(), town.show_speed(), town.turn('налево'), town.turn('направо'), town.stop())
+#
+# sport = SportCar('Ауди ТТ', 170, 'черный', False)
+# print(sport.go(), sport.show_speed(), sport.turn('налево'), sport.stop())
+#
+# work = WorkCar('Ниссан', 90, 'красный', False)
+# print(work.go(), work.show_speed(), work.turn('направо'), work.stop())
+#
+# police = PoliceCar('Вольво', 100, 'белый', True)
+# print(police.go(), police.show_speed(), police.turn('направо'), police.stop())
 
 # 5. Реализовать класс Stationery (канцелярская принадлежность).
 # определить в нём атрибут title (название) и метод draw (отрисовка). Метод выводит сообщение «Запуск отрисовки»;
