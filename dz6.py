@@ -74,6 +74,36 @@
 # Создайте экземпляры классов, передайте значения атрибутов.
 # Выполните доступ к атрибутам, выведите результат. Вызовите методы и покажите результат.
 
+# class Car:
+#     def __init__(self, name, speed, color, is_police=False):
+#         self.name = name
+#         self.speed = speed
+#         self.color = color
+#         self.is_police = is_police
+#     def go(self):
+#         return f'{self.name} поехала.'
+#     def stop(self):
+#         return f'\n {self.name} остановилась.'
+#     def turn(self, direction):
+#         return f'\n {self.name} повернула {direction}'
+#     def show_speed(self):
+#         return f'\nВаша скорость: {self.speed}'
+# class TownCar(Car):
+#     def show_speed(self):
+#         if self.speed > 60:
+#             return f'\nВаша скорость выше допустимой: {self.speed}'
+#         else:
+#             return f'Ваша скорость {self.name} в норме:'
+# class SportCar(Car):
+#     pass
+# class WorkCar(Car):
+#     def show_speed(self):
+#         if self.speed > 40:
+#             return f'\nВаша скорость выше допустимой: {self.speed}'
+#         else:
+#             return f'Скорость {self.name} в норме'
+# class PoliceCar(Car):
+#     pass
 
 
 # 5. Реализовать класс Stationery (канцелярская принадлежность).
@@ -82,4 +112,23 @@
 # в каждом классе реализовать переопределение метода draw. Для каждого класса метод должен выводить уникальное сообщение;
 # создать экземпляры классов и проверить, что выведет описанный метод для каждого экземпляра.
 
-
+# class Stationery:
+#     def __init__(self, title):
+#         self.title = title
+#     def draw(self):
+#         return f'Запуск отрисовки'
+# class Pen(Stationery):
+#     def draw(self):
+#         return f'Запуск отрисовки {self.title}'
+# class Pencil(Stationery):
+#     def draw(self):
+#         return f'Запуск отрисовки {self.title}'
+# class Handle(Stationery):
+#     def draw(self):
+#         return f'Запуск отрисовки {self.title}'
+# pen = Pen('ручкой')
+# print(pen.draw())
+# pencil = Pencil('карандашем')
+# print(pencil.draw())
+# handle = Handle('маркером')
+# print(handle.draw())
