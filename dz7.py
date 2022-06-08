@@ -1,4 +1,4 @@
-#1
+#1 Задание
 # class Matrix:
 #     def __init__(self, my_list):
 #         self.my_list = my_list
@@ -16,9 +16,8 @@
 # m = Matrix([[-1, 0, 1], [-1, 0, 1], [0, 1, -1], [1, 1, -1]])
 # new_m = Matrix([[-2, 0, 2], [-2, 0, 2], [0, 2, -2], [2, 2, -7]])
 # print(m.__add__(new_m))
-# print('>' * 50)
 
-#2
+#2 Задание
 # class Textil:
 #     def __init__(self, width, height):
 #         self.width = width
@@ -51,6 +50,32 @@
 # print(jacket.get_sq_full)
 # print(jacket.get_square_c())
 # print(jacket.get_square_j())
-# print(">" * 50)
 
-#3
+#3 Задание
+# class Cell:
+#     def __init__(self, quantity):
+#         self.quantity = int(quantity)
+#
+#     def __add__(self, other):
+#         return f'азмер клетки равен: {self.quantity + other.quantity}'
+#
+#     def __sub__(self, other):
+#         sub = self.quantity - other.quantity
+#         return f'Клета равна: {sub} клеточкам' if sub > 0 else 'Клетка исчезла'
+#     def __truediv__(self, other):
+#         return self.quantity // other.quantity
+#     def __mul__(self, other):
+#         return self.quantity * other.quantity
+#     def make_order(self, row):
+#         result = ''
+#         for i in range(int(self.quantity / row)):
+#             result += '*' * row + '\n'
+#         result += '*' * (self.quantity % row) + '\n'
+#         return result
+# cell = Cell(24)
+# cell_2 = Cell(2)
+# print(cell + cell_2)
+# print(cell - cell_2)
+# print(cell / cell_2)
+# print(cell * cell_2)
+# print(cell.make_order(7))
